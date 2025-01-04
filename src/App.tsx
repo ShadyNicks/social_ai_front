@@ -114,6 +114,10 @@ function App() {
               existingPost &&
               JSON.stringify(existingPost) !== JSON.stringify(newPost)
             ) {
+              const notification = new Audio(
+                "/assets/mixkit-sci-fi-confirmation-914.wav"
+              );
+              notification.play();
               return newPost;
             }
             return existingPost || newPost;
